@@ -165,6 +165,7 @@ export class URLTokenBaseHTTPClient implements BaseHTTPClient {
     const res = await fetch(this.getURL(relativePath, query), {
       mode: 'cors',
       headers,
+      keepalive: true,
     });
 
     return URLTokenBaseHTTPClient.formatFetchResponse(res);
@@ -188,6 +189,7 @@ export class URLTokenBaseHTTPClient implements BaseHTTPClient {
       mode: 'cors',
       body: data,
       headers,
+      keepalive: true,
     });
 
     return URLTokenBaseHTTPClient.formatFetchResponse(res);
@@ -211,6 +213,7 @@ export class URLTokenBaseHTTPClient implements BaseHTTPClient {
       mode: 'cors',
       body: data,
       headers,
+      keepalive: true,
     });
 
     return URLTokenBaseHTTPClient.formatFetchResponse(res);
