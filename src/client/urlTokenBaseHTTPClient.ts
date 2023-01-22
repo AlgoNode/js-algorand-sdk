@@ -161,7 +161,7 @@ export class URLTokenBaseHTTPClient implements BaseHTTPClient {
       ...this.defaultHeaders,
       ...requestHeaders,
     };
-
+    console.log("keepalive");
     const res = await fetch(this.getURL(relativePath, query), {
       mode: 'cors',
       headers,
